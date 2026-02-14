@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient"
+    android:padding="15dp">
+
+    <!-- Back Button & Title Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            app:tint="#00E5FF"
+            android:elevation="12dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Title (Centered) -->
+        <TextView
+            android:id="@+id/txtExploreState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Explore Cities"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingRight="50dp"
+            android:textColor="#00E5FF"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for Cities -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"/>
+</LinearLayout>

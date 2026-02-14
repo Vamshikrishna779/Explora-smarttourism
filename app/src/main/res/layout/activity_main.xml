@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_gradient">
+
+    <!-- Top Layout (Title + Settings Button) -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Explora: Your Smart Tourism and Heritage Guide"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#00E5FF"
+            android:shadowColor="#00B8D4"
+            android:shadowRadius="12"
+            android:paddingEnd="10dp"
+            android:animation="@anim/fade_in" />
+
+        <!-- Settings Button -->
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/settings"
+            android:scaleType="centerInside"
+            app:tint="#00E5FF"
+            android:elevation="12dp" />
+    </LinearLayout>
+
+    <!-- ScrollView below the top layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:scrollbars="none"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore the Best of India"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:animation="@anim/fade_in" />
+
+            <!-- Trending Destinations Carousel -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/trendingCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:animation="@anim/slide_in_left" />
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Search for a city..."
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#B0BEC5"
+                    android:background="@drawable/search_bg"
+                    android:elevation="8dp" />
+            </LinearLayout>
+
+            <!-- Feature Buttons -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStatewise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Explore Places by State"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="#00B8D4"
+                android:elevation="8dp"
+                android:layout_marginBottom="12dp"
+                android:animation="@anim/zoom_in" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTopCities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discover India’s Top Cities"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="#00796B"
+                android:elevation="8dp"
+                android:layout_marginBottom="12dp"
+                android:animation="@anim/zoom_in" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMoreFeatures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View India’s Top Cities on Map"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="#0288D1"
+                android:elevation="8dp"
+                android:layout_marginBottom="12dp"
+                android:animation="@anim/zoom_in" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBlog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Read Our Travel Blog"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="#FF8F00"
+                android:elevation="8dp"
+                android:layout_marginBottom="12dp"
+                android:animation="@anim/zoom_in" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

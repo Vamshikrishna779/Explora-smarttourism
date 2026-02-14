@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:animateLayoutChanges="true">
+
+        <!-- Back Button & Title Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:src="@drawable/back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                app:tint="#00E5FF"
+                android:elevation="12dp"
+                android:layout_marginEnd="16dp"/>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/cityTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Explore City"
+                android:textSize="24sp"
+                android:textColor="#00E5FF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingEnd="60dp"/>
+        </LinearLayout>
+
+        <!-- City Card (Glassmorphic) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="12dp"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="#00E5FF"
+            android:backgroundTint="#55082532"
+            android:clipToOutline="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center">
+
+                <!-- City Name -->
+                <TextView
+                    android:id="@+id/cityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City Name"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#00E5FF"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:layoutAnimation="@anim/fade_in" />
+
+                <!-- Ratings -->
+                <TextView
+                    android:id="@+id/cityRatings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratings: 4.5/5⭐"
+                    android:textSize="16sp"
+                    android:textColor="#B0BEC5"
+                    android:layoutAnimation="@anim/slide_in_left" />
+
+                <!-- Ideal Duration -->
+                <TextView
+                    android:id="@+id/idealDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ideal Duration: 3-5 Days"
+                    android:textSize="16sp"
+                    android:textColor="#B0BEC5"
+                    android:layoutAnimation="@anim/slide_in_right" />
+
+                <!-- Best Time to Visit -->
+                <TextView
+                    android:id="@+id/bestTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Best Time to Visit: Oct - Mar"
+                    android:textSize="16sp"
+                    android:textColor="#B0BEC5"
+                    android:layoutAnimation="@anim/slide_in_left" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Description Card (Glassmorphic) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="#00E5FF"
+            android:backgroundTint="#55082532"
+            android:clipToOutline="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center_horizontal">
+
+                <!-- Heading -->
+                <TextView
+                    android:id="@+id/head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#00E5FF"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- City Description -->
+                <TextView
+                    android:id="@+id/cityDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City Description..."
+                    android:textSize="16sp"
+                    android:textColor="#E0E0E0"
+                    android:padding="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:justificationMode="inter_word"
+                    android:textIsSelectable="true"
+                    android:layoutAnimation="@anim/fade_in" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Explore More Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/exploreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore More"
+            android:textSize="18sp"
+            android:padding="14dp"
+            android:layout_marginTop="12dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="#00E5FF"
+            android:textColor="@android:color/black"
+            app:elevation="12dp"
+            android:layout_gravity="center"
+            android:layoutAnimation="@anim/bounce" />
+    </LinearLayout>
+</ScrollView>

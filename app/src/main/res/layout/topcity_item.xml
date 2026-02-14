@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    android:background="@android:color/transparent"
+    app:cardBackgroundColor="@color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- City Name -->
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:paddingBottom="4dp"/>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/cityName"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_gradient"/>
+
+        <!-- Ratings Badge -->
+        <TextView
+            android:id="@+id/cityRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cityName"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondary"
+            android:background="@drawable/bg_gradient"
+            android:padding="6dp"
+            android:text="★ 4.5" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:animateLayoutChanges="true">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/back"
+            android:scaleType="centerInside"
+            app:tint="#00E5FF"
+            android:elevation="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <!-- Card for Place Info -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#121212">
+
+                <!-- Place Name -->
+                <TextView
+                    android:id="@+id/txtPlaceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10"
+                    android:layout_gravity="center"
+                    android:paddingBottom="8dp" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/bg_gradient"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Dynamic Details -->
+                <TextView android:id="@+id/txtType" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtYear" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtTimeNeeded" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtRating" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtFee" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtAirport" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtWeeklyOff" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtSignificance" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtDSLR" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtReviewCount" style="@style/FuturisticTextStyle"/>
+                <TextView android:id="@+id/txtBestTime" style="@style/FuturisticTextStyle"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button with Modern Styling -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewOnMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View on Map"
+            android:layout_marginTop="10dp"
+            android:padding="14dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="#16B4C6"
+            android:textColor="@android:color/white"
+            app:elevation="12dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

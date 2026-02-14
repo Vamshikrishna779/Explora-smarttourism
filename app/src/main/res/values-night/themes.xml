@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Smarttourism" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">#00B8D4</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Secondary Colors -->
+        <item name="colorSecondary">#0288D1</item>
+        <item name="colorOnSecondary">#E0F7FA</item>
+
+        <!-- Transparent Status Bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:windowLightStatusBar">false</item> <!-- Makes icons white -->
+
+        <!-- Background & Text Colors -->
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    </style>
+</resources>
+<!--<resources xmlns:tools="http://schemas.android.com/tools">-->
+<!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+<!--<style name="Base.Theme.Smarttourism" parent="Theme.Material3.DayNight.NoActionBar">-->
+<!--    &lt;!&ndash; Customize your dark theme here. &ndash;&gt;-->
+<!--    &lt;!&ndash; <item name="colorPrimary">@color/my_dark_primary</item> &ndash;&gt;-->
+<!--</style>-->
+<!--</resources>-->

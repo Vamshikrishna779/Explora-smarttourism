@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerInside"
+        app:tint="#00E5FF"
+        android:elevation="12dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/txtSettingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#00E5FF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtSettingsTitle"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Dark Mode Toggle -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dark Mode"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:background="@drawable/btn_bg"
+                android:elevation="8dp"
+                android:thumbTint="#00E5FF"/>
+
+            <!-- Notifications Toggle -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enable Notifications"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:background="@drawable/btn_bg"
+                android:elevation="8dp"
+                android:layout_marginTop="10dp"
+                android:thumbTint="#00E5FF"/>
+
+            <!-- Language Selection -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change Language"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="#00B8D4"
+                android:elevation="8dp"
+                android:layout_marginTop="10dp" />
+
+            <!-- Privacy Policy -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="#0288D1"
+                android:elevation="8dp"
+                android:layout_marginTop="10dp" />
+
+            <!-- Logout Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="#D32F2F"
+                android:elevation="8dp"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
